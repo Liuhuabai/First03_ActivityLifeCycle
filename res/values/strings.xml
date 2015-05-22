@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">First03_ActivityLife</string>
+    <string name="normal">Normal activity</string>
+    <string name="dialog">Dialog activity</string>
+    <string name="standard">Standard</string>
+    <string name="singleTop">SingleTop</string>
+    <string name="singleTask">SingleTask</string>
+    <string name="singleInstance">SingleInstance</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

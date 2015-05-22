@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.first03_activitylifecycle"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!-- 四种模式 -->
+        <!-- 1、标准模式，即只要是是开始一个activity，就会压到栈顶，然后使用它 -->
+        <!-- 2、栈顶模式，如果这个activity已经位于栈顶，就直接使用它，如果没有，则创建一个新的，使用方法，
+        		在activity上添加singleTop,android:launchMode="singleTop"
+       	-->
+        <!-- 3、单例模式，检查栈内是不是存在该activity实例，如果存在，就把压在它之上的activity全部出栈，如果不存在，则创建一个activity
+        		使用方法：android:launchMode="singleTask"
+         -->
+         <!-- 4、singleInstance，它启动一个新的返回栈来管理这个活动。 -->
+         
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+             >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NormalActivity"></activity>
+        <!-- 在这里用一句话就可以定义其风格了。 -->
+        <activity android:name=".DialogActivity" android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name=".SecondActivity"
+            android:launchMode="singleTask"
+            ></activity>
+        <activity android:name=".ThirdActivity"
+            android:launchMode="singleInstance"
+            ></activity>
+    </application>
+
+</manifest>
